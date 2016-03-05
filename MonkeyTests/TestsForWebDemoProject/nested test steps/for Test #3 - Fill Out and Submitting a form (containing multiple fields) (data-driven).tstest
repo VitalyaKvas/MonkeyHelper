@@ -1475,7 +1475,7 @@
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
-    "ResourceFilePath": "TestsForWeb\\nested test steps\\for Test #3 - Fill Out and Submitting a form (containing multiple fields) (data-driven).resx",
+    "ResourceFilePath": "TestsForWebDemoProject\\nested test steps\\for Test #3 - Fill Out and Submitting a form (containing multiple fields) (data-driven).resx",
     "HasCodeBehind": false,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -1507,7 +1507,7 @@
     "Description": "uses data from Excel spreadsheet. Called as a step so login is not repeated for every iteration.",
     "Name": "for Test #3 - Fill Out and Submitting a form (containing multiple fields) (data-driven)",
     "Owner": "",
-    "Path": "TestsForWeb\\nested test steps\\for Test #3 - Fill Out and Submitting a form (containing multiple fields) (data-driven).tstest",
+    "Path": "TestsForWebDemoProject\\nested test steps\\for Test #3 - Fill Out and Submitting a form (containing multiple fields) (data-driven).tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "03a54d75-2ce9-4373-9004-a1847e96a85f",
