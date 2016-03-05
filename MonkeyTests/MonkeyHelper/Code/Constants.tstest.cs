@@ -20,8 +20,8 @@ namespace MonkeyTests
 {
     public static class Constans
     {
-        public static string BrowserWaitUntilReady = @"MonkeyHelper\Steps\BrowserWaitUntilReady.tstest";
-        public static string NavigationToBaseUrl = @"MonkeyHelper\Steps\NavigationToBaseUrl.tstest";
-        public static string ClickOnElement = @"MonkeyHelper\Steps\ClickOnElement.tstest";
+        public static string BrowserWaitUntilReady = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_BrowserWaitUntilReady.tstest";
+        public static string NavigationToBaseUrl = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_NavigationToBaseUrl.tstest";
+        public static string ClickOnElement = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_ClickOnElement.tstest";
     }
 }
