@@ -60,7 +60,7 @@
     "TestLinks": [],
     "Description": "",
     "Name": "Constants",
-    "Owner": null,
+    "Owner": "",
     "Path": "MonkeyHelper\\Code\\Constants.tstest",
     "Priority": 0,
     "TestType": 0,

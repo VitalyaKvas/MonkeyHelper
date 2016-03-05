@@ -23,5 +23,6 @@ namespace MonkeyTests
         public static string BrowserWaitUntilReady = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_BrowserWaitUntilReady.tstest";
         public static string NavigationToBaseUrl = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_NavigationToBaseUrl.tstest";
         public static string ClickOnElement = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_ClickOnElement.tstest";
+        public static string EnterText = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_EnterText.tstest";
     }
 }
