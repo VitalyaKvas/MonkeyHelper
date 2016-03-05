@@ -46,8 +46,38 @@ namespace MonkeyTests
         
         // Add your test methods here...
     
-        [CodedStep(@"Click on login button")]
+        [CodedStep(@"Configuration step for enter text in login")]
         public void Test_0__Attempt_login_with_invalid_credentials_verify_correct_error_message_CodedStep()
+        {
+            var enteringText = new EnteringTextModel()
+            {
+                SearchOption = SearchOptionModel.ByXPath,
+                SelectionForElement = ".//*[@id='login']",
+                MakeСleaningOldText = true,
+                TextForEntering = "george",
+            };
+            
+            SetExtractedValue("EnteringTextModel", enteringText);
+            
+            // ExecuteTest(Constans.EnterText);
+        }
+    
+        [CodedStep(@"Configuration step for enter text in password")]
+        public void Test_0__Attempt_login_with_invalid_credentials_verify_correct_error_message_CodedStep1()
+        {
+            var enteringText = new EnteringTextModel()
+            {
+                SearchOption = SearchOptionModel.ByXPath,
+                SelectionForElement = ".//*[@id='password']",
+                MakeСleaningOldText = true,
+                TextForEntering = "unknown",
+            };
+            
+            SetExtractedValue("EnteringTextModel", enteringText);
+        }
+    
+        [CodedStep(@"Configuration step for click on login button")]
+        public void Test_0__Attempt_login_with_invalid_credentials_verify_correct_error_message_CodedStep2()
         {
             var useMouse = new ClickOnElementModel()
             {
@@ -55,8 +85,6 @@ namespace MonkeyTests
                 Selection = ".//*[@id='login_button']",
             };
             SetExtractedValue("ClickOnElementModel", useMouse);
-            
-            ExecuteTest(Constans.ClickOnElement);
         }
     }
 }
