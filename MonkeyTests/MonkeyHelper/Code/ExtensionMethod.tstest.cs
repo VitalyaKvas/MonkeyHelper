@@ -21,9 +21,9 @@ namespace MonkeyTests
     public static class ExtensionMethod
     {
         /// <summary>
-		/// WriteLineInLogAndConsole
+        /// WriteLineInLogAndConsole
         /// This method for recording message in two containers.
-		/// </summary>
+        /// </summary>
         public static void WriteLineInLogAndConsole (this Log log, string message)
         {
             log.WriteLine(message);
@@ -31,10 +31,10 @@ namespace MonkeyTests
         }
         
         /// <summary>
-		/// TryWaitForAjax
+        /// TryWaitForAjax
         /// This method is a wrapper over the method WaitForAjax.
         /// It catch all internal exception in method WaitForAjax.
-		/// </summary>
+        /// </summary>
         public static void TryWaitForAjax (this Browser browser, int timeout, Log log = null)
         {
             try
@@ -50,8 +50,8 @@ namespace MonkeyTests
         
         /// <summary>
         /// GetExtractedValue<T>
-		/// It is a versatile technique that is used for simplified type conversion.
-		/// </summary>
+        /// It is a versatile technique that is used for simplified type conversion.
+        /// </summary>
         public static T GetExtractedValue<T>(this BaseWebAiiTest webAii, string dataBindVariableName) 
             where T : class
         {
@@ -63,7 +63,7 @@ namespace MonkeyTests
         /// TryGetExtractedValue<T>
         /// This method is a wrapper over the method GetExtractedValue.
         /// It catch all internal exception in method GetExtractedValue.
-		/// </summary>
+        /// </summary>
         public static T TryGetExtractedValue<T>(this BaseWebAiiTest webAii, string dataBindVariableName, Log log = null) 
             where T : class
         {
@@ -86,6 +86,29 @@ namespace MonkeyTests
             }
             
             return value;
+        }
+        
+        /// <summary>
+		/// GetXPath
+        /// This universal method for generate xPath.
+		/// </summary>
+        public static string GetXPath(this SearchOptionModel searchOption, string selection, Log log = null)
+        {
+            string xPath = null;
+            switch (searchOption)
+            {
+                case SearchOptionModel.ByXPath: 
+                    xPath = selection; 
+                    break;
+                    
+                default:
+                    throw new NotImplementedException(searchOption.ToString());
+            }
+            
+            if (log != null)
+                log.WriteLineInLogAndConsole(string.Format("xPath: {0}", xPath));
+            
+            return xPath;
         }
     }
 }
