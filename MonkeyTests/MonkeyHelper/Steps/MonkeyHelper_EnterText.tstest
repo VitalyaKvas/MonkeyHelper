@@ -1,0 +1,274 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "128e7852-4d3a-4d3b-be69-96cdb1e14e6b",
+            "Description": "[MonkeyHelper_EnterText_CodedStep] : Sample",
+            "CustomDescription": "Sample",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//input[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"LoginName\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.EnterText);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": false,
+            "Order": 1,
+            "Id": "MonkeyHelper_EnterText_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_EnterText2hn4xqk3.v51",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "9e14f64f-457a-4dc0-8785-1d25b1fd0b09",
+            "Description": "[MonkeyHelper_EnterText_CodedStep1] : Click on input",
+            "CustomDescription": "Click on input.",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            \r\n            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = enteringText.SearchOption,\r\n                Selection = enteringText.SelectionForElement,\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);\r\n            \r\n            ExecuteTest(Constans.ClickOnElement);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "MonkeyHelper_EnterText_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_EnterTextfilny41i.gll",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6f2ba360-5ba3-410a-92be-fa10ede73dbc",
+            "Description": "[MonkeyHelper_EnterText_CodedStep2] : Cleaning input",
+            "CustomDescription": "Make cleaning old text",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            \r\n            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            \r\n            if (enteringText.MakeСleaningOldText)\r\n            {                \r\n                string xPath = enteringText.GetXPath(Log);\r\n                var htmlInput = Find.AllByXPath<HtmlInputControl>(xPath).FirstOrDefault();\r\n                \r\n                if (htmlInput == null)\r\n                    throw new Exception(string.Format(\"Element not found. Use next xPath for search: {0}\", xPath));\r\n            \r\n                // Move cursor in start \r\n                Manager.Desktop.KeyBoard.KeyDown(System.Windows.Forms.Keys.Home);\r\n                System.Threading.Thread.Sleep(15);\r\n            \r\n                var textFromInput = htmlInput.Value ?? \"\";\r\n                \r\n                var textLength = textFromInput.Length;\r\n                Log.WriteLineInLogAndConsole(\"This input contains the text of a long : \" + textLength);\r\n                \r\n                // Delete all letters\r\n                for (int index = 0; index <= textLength; index++)\r\n                {   \r\n                    Manager.Desktop.KeyBoard.KeyDown(System.Windows.Forms.Keys.Delete);\r\n                    System.Threading.Thread.Sleep(15);\r\n                }\r\n            }",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "MonkeyHelper_EnterText_CodedStep2",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_EnterTextj525tmz5.4mv",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "371f1f62-4211-4ae3-96c6-7fba7b40226b",
+            "Description": "[MonkeyHelper_EnterText_CodedStep3] : Click on input.",
+            "CustomDescription": "Entered text",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            Log.WriteLineInLogAndConsole(\"Text for enter : \" + enteringText.TextForEntering);\r\n            \r\n            // Enter text\r\n            Manager.Desktop.KeyBoard.TypeText(enteringText.TextForEntering, 40);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "MonkeyHelper_EnterText_CodedStep3",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_EnterTextezzhqwcf.tmf",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "23575a70-0edd-4b0e-9917-c61632ebc803",
+            "Description": "Execute test 'MonkeyHelper_BrowserWaitUntilReady'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_BrowserWaitUntilReady",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_BrowserWaitUntilReady.tstest",
+                "TestUniqueId": "a5f913f1-715c-4afc-bfdb-c000aa858589",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_EnterTextfduu03uf.uyz",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "MonkeyTests.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "MonkeyTests.MonkeyHelper_EnterText",
+    "IsManual": false,
+    "ResourceFilePath": "MonkeyHelper\\Steps\\MonkeyHelper_EnterText.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "MonkeyHelper_EnterText",
+    "Owner": "",
+    "Path": "MonkeyHelper\\Steps\\MonkeyHelper_EnterText.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "7150b864-b033-4941-94e0-852af2e346de",
+    "Id": "7150b864-b033-4941-94e0-852af2e346de",
+    "ProjectId": "d0958ad3-8052-4115-b2cd-30435e861002",
+    "Version": 200
+  }
+}
