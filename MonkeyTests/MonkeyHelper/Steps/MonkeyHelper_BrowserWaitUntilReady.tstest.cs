@@ -18,7 +18,7 @@ using ArtOfTest.WebAii.Silverlight.UI;
 
 namespace MonkeyTests
 {
-    public class BrowserWaitUntilReady : BaseWebAiiTest
+    public class MonkeyHelper_BrowserWaitUntilReady : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 

@@ -25,7 +25,7 @@ namespace MonkeyTests
         public string Selection { get; set; }
     }
 
-    public class ClickOnElement : BaseWebAiiTest
+    public class MonkeyHelper_ClickOnElement : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 

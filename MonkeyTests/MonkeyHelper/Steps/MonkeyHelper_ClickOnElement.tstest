@@ -93,6 +93,47 @@
             "QcVersionStamp": 0,
             "Version": 200
           }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "9302e6f5-9a18-4881-af58-89da094a8515",
+            "Description": "Execute test 'MonkeyHelper_BrowserWaitUntilReady'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_BrowserWaitUntilReady",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_BrowserWaitUntilReady.tstest",
+                "TestUniqueId": "a5f913f1-715c-4afc-bfdb-c000aa858589",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_ClickOnElementudatzlln.3tu",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
         }
       ]
     },
@@ -108,9 +149,9 @@
     "UseDefaultWpfAppPath": false,
     "TestAssembly": "MonkeyTests.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "MonkeyTests.ClickOnElement",
+    "TestClass": "MonkeyTests.MonkeyHelper_ClickOnElement",
     "IsManual": false,
-    "ResourceFilePath": "MonkeyHelper\\Steps\\ClickOnElement.resx",
+    "ResourceFilePath": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.resx",
     "HasCodeBehind": true,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
@@ -140,9 +181,9 @@
     "QcTestVersionStamp": 0,
     "TestLinks": [],
     "Description": "",
-    "Name": "ClickOnElement",
+    "Name": "MonkeyHelper_ClickOnElement",
     "Owner": null,
-    "Path": "MonkeyHelper\\Steps\\ClickOnElement.tstest",
+    "Path": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.tstest",
     "Priority": 0,
     "TestType": 0,
     "UniqueId": "cb634b76-20ed-4da7-a362-60b6a9a3d00d",
