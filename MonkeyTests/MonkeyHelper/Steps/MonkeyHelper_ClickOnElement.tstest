@@ -23,7 +23,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[test()='Test']\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[test()='Test']\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.ClickOnElement);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -63,7 +63,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            \r\n            var useMouse = this.GetExtractedValue<ClickOnElementModel>(\"ClickOnElementModel\");\r\n            \r\n            string xPath = null;\r\n            switch (useMouse.SearchOption)\r\n            {\r\n                case SearchOptionModel.ByXPath: \r\n                    xPath = useMouse.Selection; \r\n                    break;\r\n                    \r\n                default: \r\n                    throw new NotImplementedException(useMouse.SearchOption.ToString());\r\n            }\r\n            \r\n            Log.WriteLineInLogAndConsole(string.Format(\"xPath for click: {0}\", xPath));\r\n\r\n            var element = Find.AllByXPath<HtmlControl>(xPath).FirstOrDefault();\r\n            \r\n            if(element == null)\r\n                throw new Exception(string.Format(\"Element not found. Use next xPath for search: {0}\", xPath));\r\n            \r\n            element.ScrollToVisible();\r\n            element.Focus();\r\n            element.MouseClick();",
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            \r\n            var useMouse = this.GetExtractedValue<ClickOnElementModel>(\"ClickOnElementModel\");\r\n            \r\n            string xPath = useMouse.SearchOption.GetXPath(useMouse.Selection, Log);\r\n\r\n            var element = Find.AllByXPath<HtmlControl>(xPath).FirstOrDefault();\r\n            \r\n            if(element == null)\r\n                throw new Exception(string.Format(\"Element not found. Use next xPath for search: {0}\", xPath));\r\n            \r\n            element.ScrollToVisible();\r\n            element.Focus();\r\n            element.MouseClick();",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

@@ -61,6 +61,10 @@ namespace MonkeyTests
                 Selection = ".//*[test()='Test']",
             };
             SetExtractedValue("ClickOnElementModel", useMouse);
+            
+            // Use auto step 
+            // or
+            // ExecuteTest(Constans.ClickOnElement);
         }
     
         [CodedStep(@"Click on element")]
@@ -70,18 +74,7 @@ namespace MonkeyTests
             
             var useMouse = this.GetExtractedValue<ClickOnElementModel>("ClickOnElementModel");
             
-            string xPath = null;
-            switch (useMouse.SearchOption)
-            {
-                case SearchOptionModel.ByXPath: 
-                    xPath = useMouse.Selection; 
-                    break;
-                    
-                default: 
-                    throw new NotImplementedException(useMouse.SearchOption.ToString());
-            }
-            
-            Log.WriteLineInLogAndConsole(string.Format("xPath for click: {0}", xPath));
+            string xPath = useMouse.SearchOption.GetXPath(useMouse.Selection, Log);
 
             var element = Find.AllByXPath<HtmlControl>(xPath).FirstOrDefault();
             
