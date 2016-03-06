@@ -18,7 +18,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "03a58017-8d8a-48fb-a290-98e3c2a7f36d",
-            "Description": "[MonkeyHelper_Verify_CodedStep1] : New Coded Step",
+            "Description": "[MonkeyHelper_Verify_CodedStep1] : Sample",
             "CustomDescription": "Sample",
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",

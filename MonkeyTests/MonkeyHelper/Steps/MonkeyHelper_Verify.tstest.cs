@@ -58,7 +58,7 @@ namespace MonkeyTests
         
         // Add your test methods here...
     
-        [CodedStep(@"New Coded Step")]
+        [CodedStep(@"Sample")]
         public void MonkeyHelper_Verify_CodedStep1()
         {
             var verify = new VerifyModel()
