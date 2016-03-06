@@ -89,8 +89,6 @@ namespace MonkeyTests
                 Selection = enteringText.SelectionForElement,
             };
             SetExtractedValue("ClickOnElementModel", useMouse);
-            
-            ExecuteTest(Constans.ClickOnElement);
         }
     
         [CodedStep(@"Cleaning input")]
@@ -105,8 +103,7 @@ namespace MonkeyTests
                 string xPath = enteringText.GetXPath(Log);
                 var htmlInput = Find.AllByXPath<HtmlInputControl>(xPath).FirstOrDefault();
                 
-                if (htmlInput == null)
-                    throw new Exception(string.Format("Element not found. Use next xPath for search: {0}", xPath));
+                Assert.IsNotNull(htmlInput, string.Format("Element not found. Use next xPath for search: {0}", xPath));
             
                 // Move cursor in start 
                 Manager.Desktop.KeyBoard.KeyDown(System.Windows.Forms.Keys.Home);

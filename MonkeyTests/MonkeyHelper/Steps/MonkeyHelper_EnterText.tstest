@@ -59,11 +59,11 @@
           "__value": {
             "Runtime ID": "9e14f64f-457a-4dc0-8785-1d25b1fd0b09",
             "Description": "[MonkeyHelper_EnterText_CodedStep1] : Click on input",
-            "CustomDescription": "Click on input.",
+            "CustomDescription": "Configuration step for click on input.",
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            \r\n            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = enteringText.SearchOption,\r\n                Selection = enteringText.SelectionForElement,\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);\r\n            \r\n            ExecuteTest(Constans.ClickOnElement);",
+                "Code": "            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            \r\n            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = enteringText.SearchOption,\r\n                Selection = enteringText.SelectionForElement,\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -97,13 +97,54 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
+            "Runtime ID": "ab2cdca9-c065-4707-b6eb-cc5e1aca7e3d",
+            "Description": "Execute test 'MonkeyHelper_ClickOnElement'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_ClickOnElement",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.tstest",
+                "TestUniqueId": "cb634b76-20ed-4da7-a362-60b6a9a3d00d",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_EnterTextsi0dder4.ohr",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
             "Runtime ID": "6f2ba360-5ba3-410a-92be-fa10ede73dbc",
             "Description": "[MonkeyHelper_EnterText_CodedStep2] : Cleaning input",
             "CustomDescription": "Make cleaning old text",
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            \r\n            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            \r\n            if (enteringText.MakeСleaningOldText)\r\n            {                \r\n                string xPath = enteringText.GetXPath(Log);\r\n                var htmlInput = Find.AllByXPath<HtmlInputControl>(xPath).FirstOrDefault();\r\n                \r\n                if (htmlInput == null)\r\n                    throw new Exception(string.Format(\"Element not found. Use next xPath for search: {0}\", xPath));\r\n            \r\n                // Move cursor in start \r\n                Manager.Desktop.KeyBoard.KeyDown(System.Windows.Forms.Keys.Home);\r\n                System.Threading.Thread.Sleep(15);\r\n            \r\n                var textFromInput = htmlInput.Value ?? \"\";\r\n                \r\n                var textLength = textFromInput.Length;\r\n                Log.WriteLineInLogAndConsole(\"This input contains the text of a long : \" + textLength);\r\n                \r\n                // Delete all letters\r\n                for (int index = 0; index <= textLength; index++)\r\n                {   \r\n                    Manager.Desktop.KeyBoard.KeyDown(System.Windows.Forms.Keys.Delete);\r\n                    System.Threading.Thread.Sleep(15);\r\n                }\r\n            }",
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            \r\n            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            \r\n            if (enteringText.MakeСleaningOldText)\r\n            {                \r\n                string xPath = enteringText.GetXPath(Log);\r\n                var htmlInput = Find.AllByXPath<HtmlInputControl>(xPath).FirstOrDefault();\r\n                \r\n                Assert.IsNotNull(htmlInput, string.Format(\"Element not found. Use next xPath for search: {0}\", xPath));\r\n            \r\n                // Move cursor in start \r\n                Manager.Desktop.KeyBoard.KeyDown(System.Windows.Forms.Keys.Home);\r\n                System.Threading.Thread.Sleep(15);\r\n            \r\n                var textFromInput = htmlInput.Value ?? \"\";\r\n                \r\n                var textLength = textFromInput.Length;\r\n                Log.WriteLineInLogAndConsole(\"This input contains the text of a long : \" + textLength);\r\n                \r\n                // Delete all letters\r\n                for (int index = 0; index <= textLength; index++)\r\n                {   \r\n                    Manager.Desktop.KeyBoard.KeyDown(System.Windows.Forms.Keys.Delete);\r\n                    System.Threading.Thread.Sleep(15);\r\n                }\r\n            }",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -124,7 +165,7 @@
               }
             },
             "Enabled": true,
-            "Order": 3,
+            "Order": 4,
             "Id": "MonkeyHelper_EnterText_CodedStep2",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -164,7 +205,7 @@
               }
             },
             "Enabled": true,
-            "Order": 4,
+            "Order": 5,
             "Id": "MonkeyHelper_EnterText_CodedStep3",
             "StepState": 1,
             "ContinueOnFailure": false,
@@ -205,7 +246,7 @@
               }
             },
             "Enabled": true,
-            "Order": 5,
+            "Order": 6,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,

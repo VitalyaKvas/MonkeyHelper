@@ -78,8 +78,7 @@ namespace MonkeyTests
 
             var element = Find.AllByXPath<HtmlControl>(xPath).FirstOrDefault();
             
-            if(element == null)
-                throw new Exception(string.Format("Element not found. Use next xPath for search: {0}", xPath));
+            Assert.IsNotNull(element, string.Format("Element not found. Use next xPath for search: {0}", xPath));
             
             element.ScrollToVisible();
             element.Focus();

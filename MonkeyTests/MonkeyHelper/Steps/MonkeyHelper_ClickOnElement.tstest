@@ -63,7 +63,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            \r\n            var useMouse = this.GetExtractedValue<ClickOnElementModel>(\"ClickOnElementModel\");\r\n            \r\n            string xPath = useMouse.SearchOption.GetXPath(useMouse.Selection, Log);\r\n\r\n            var element = Find.AllByXPath<HtmlControl>(xPath).FirstOrDefault();\r\n            \r\n            if(element == null)\r\n                throw new Exception(string.Format(\"Element not found. Use next xPath for search: {0}\", xPath));\r\n            \r\n            element.ScrollToVisible();\r\n            element.Focus();\r\n            element.MouseClick();",
+                "Code": "            ActiveBrowser.RefreshDomTree();\r\n            \r\n            var useMouse = this.GetExtractedValue<ClickOnElementModel>(\"ClickOnElementModel\");\r\n            \r\n            string xPath = useMouse.SearchOption.GetXPath(useMouse.Selection, Log);\r\n\r\n            var element = Find.AllByXPath<HtmlControl>(xPath).FirstOrDefault();\r\n            \r\n            Assert.IsNotNull(element, string.Format(\"Element not found. Use next xPath for search: {0}\", xPath));\r\n            \r\n            element.ScrollToVisible();\r\n            element.Focus();\r\n            element.MouseClick();",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -182,7 +182,7 @@
     "TestLinks": [],
     "Description": "",
     "Name": "MonkeyHelper_ClickOnElement",
-    "Owner": null,
+    "Owner": "",
     "Path": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.tstest",
     "Priority": 0,
     "TestType": 0,
