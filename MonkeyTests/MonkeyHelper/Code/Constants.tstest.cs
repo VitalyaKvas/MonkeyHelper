@@ -25,5 +25,6 @@ namespace MonkeyTests
         public static string ClickOnElement = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_ClickOnElement.tstest";
         public static string EnterText = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_EnterText.tstest";
         public static string Verify = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_Verify.tstest";
+        public static string WaitForElement = @"MonkeyTests\MonkeyHelper\Steps\MonkeyHelper_WaitForElement.tstest";
     }
 }
