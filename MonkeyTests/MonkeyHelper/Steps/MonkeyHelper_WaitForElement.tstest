@@ -1,0 +1,153 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerServerName": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "b0baf455-b396-4a08-b0ed-8a091e2837bd",
+            "Description": "[MonkeyHelper_WaitForVisibleElement_CodedStep] : Sample",
+            "CustomDescription": "Sample",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var waitForElement = new WaitForElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[test()='Test']\",\r\n                Timeout = 60000,\r\n                Interval = 500,\r\n                How = WaitForElementModel.HowWait.ForVisible,\r\n            };\r\n            SetExtractedValue(\"WaitForElementModel\", waitForElement);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.WaitForElement);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": false,
+            "Order": 1,
+            "Id": "MonkeyHelper_WaitForVisibleElement_CodedStep",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_WaitForVisibleElementzv4wq4u2.kn1",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "a1ce38ad-d64e-4e63-aec0-5eb2e9834265",
+            "Description": "[MonkeyHelper_WaitForVisibleElement_CodedStep1] : Wait for visible element",
+            "CustomDescription": "Wait for element",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var waitForElement = this.GetExtractedValue<WaitForElementModel>(\"WaitForElementModel\");\r\n                          \r\n            var xPath = waitForElement.GetXPath(Log);\r\n            var stopwatch = Stopwatch.StartNew();\r\n            var countFoundElements = 0;\r\n            \r\n            do\r\n            {\r\n                ActiveBrowser.RefreshDomTree();\r\n                \r\n                var elements = Find.AllByXPath<HtmlControl>(xPath);\r\n                countFoundElements = elements.Count;\r\n                \r\n                Log.WriteLineInLogAndConsole(String.Format(\"Found {0} element(s).\", countFoundElements));\r\n                \r\n                foreach (var element in elements)\r\n                {\r\n                    switch(waitForElement.How)\r\n                    {\r\n                        case WaitForElementModel.HowWait.ForExists:\r\n                            element.Wait.ForExists(waitForElement.Timeout);\r\n                            break;\r\n                            \r\n                        case WaitForElementModel.HowWait.ForExistsNot:\r\n                            element.Wait.ForExistsNot(waitForElement.Timeout);\r\n                            break;\r\n                            \r\n                        case WaitForElementModel.HowWait.ForVisible:\r\n                            element.Wait.ForVisible(waitForElement.Timeout);\r\n                            break;\r\n                            \r\n                        case WaitForElementModel.HowWait.ForVisibleNot:\r\n                            element.Wait.ForVisibleNot(waitForElement.Timeout);\r\n                            break;\r\n                            \r\n                        default:\r\n                            throw new NotImplementedException(string.Format(\"Not found implementation for {0}.\", waitForElement.How.ToString()));\r\n                    }\r\n                }\r\n                \r\n                // If the wait is completed, then break the loop.\r\n                if (countFoundElements > 0)\r\n                    break;\r\n                \r\n                System.Threading.Thread.Sleep(waitForElement.Interval);\r\n            \r\n            } while (stopwatch.ElapsedMilliseconds < waitForElement.Timeout);\r\n            \r\n            Assert.IsTrue(countFoundElements > 0, \"Element not foun for wait.\");",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "MonkeyHelper_WaitForVisibleElement_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "MonkeyHelper_WaitForVisibleElementqolj1egf.npn",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "UseDefaultWpfAppPath": false,
+    "TestAssembly": "MonkeyTests.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "MonkeyTests.MonkeyHelper_WaitForElement",
+    "IsManual": false,
+    "ResourceFilePath": "MonkeyHelper\\Steps\\MonkeyHelper_WaitForElement.resx",
+    "HasCodeBehind": true,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "QcId": 0,
+    "QcFilePath": null,
+    "QcTestVersionStamp": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "MonkeyHelper_WaitForElement",
+    "Owner": null,
+    "Path": "MonkeyHelper\\Steps\\MonkeyHelper_WaitForElement.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "b5e711c3-7545-46c3-8ced-51bcab3448da",
+    "Id": "b5e711c3-7545-46c3-8ced-51bcab3448da",
+    "ProjectId": "d0958ad3-8052-4115-b2cd-30435e861002",
+    "Version": 200
+  }
+}
