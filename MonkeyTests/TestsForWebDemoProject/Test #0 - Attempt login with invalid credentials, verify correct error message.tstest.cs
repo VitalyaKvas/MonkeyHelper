@@ -86,5 +86,16 @@ namespace MonkeyTests
             };
             SetExtractedValue("ClickOnElementModel", useMouse);
         }
+    
+        [CodedStep(@"New Coded Step")]
+        public void Test_0__Attempt_login_with_invalid_credentials_verify_correct_error_message_CodedStep3()
+        {
+            var verify = new VerifyModel()
+            {
+                SearchOption = SearchOptionModel.ByXPath,
+                Selection = ".//p[contains(text(),'Incorrect user/password')]",
+            };
+            SetExtractedValue("VerifyModel", verify);
+        }
     }
 }
