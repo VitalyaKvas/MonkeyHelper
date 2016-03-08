@@ -18,7 +18,9 @@
       "Telerik.WebAii.Controls.Html, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "Telerik.WebAii.Controls.Xaml, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "Telerik.WebAii.Controls.Xaml.Wpf, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.TestingFramework.Controls.KendoUI, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45"
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
     ],
     "Steps": {
       "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
@@ -67,101 +69,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "28f56bb9-9ef5-4454-bb35-2bde5ef938b2",
-            "Description": "Verify 'TextContent' 'Contains' 'Inbox folder (16)' on 'StatusPTag'",
-            "CustomDescription": null,
+            "Runtime ID": "d59016ca-1bc8-4ff9-a317-e3c2e9d49d3b",
+            "Description": "[Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep1] : Configuration step for verify text contains 'NewUser@TelerikTestStudio.com' on SentTable",
+            "CustomDescription": "Configuration step for verify text contains 'Inbox folder (16)' on status",
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ContentVerificationDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "CompareType": 2,
-                "SegmentType": 3,
-                "ExpectedString": "Inbox folder (16)",
-                "UseBackupSearch": true,
-                "DataBindVariableName": null,
-                "Timeout": 30000,
-                "CheckInterval": 500,
-                "EnsureStateIsCurrent": false,
-                "Pause": 0,
+                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='status' and text()='Inbox folder (16)']\",\r\n            };\r\n            SetExtractedValue(\"VerifyModel\", verify);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "textTarget": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "textTarget",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://localhost:8080/Inbox.html",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "nbRLQkyaL2A4vD2ibVB3QWEg6Ug=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "StatusPTag",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=status"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=p"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[1]/p[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlControl",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 2,
+                "Elements": {},
+                "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {}
@@ -169,10 +97,10 @@
             },
             "Enabled": true,
             "Order": 2,
-            "Id": "",
-            "StepState": 0,
+            "Id": "Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep1",
+            "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "A Perf Testdqodgkc3.nw4",
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionaff1gbh5.plb",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -181,93 +109,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "3d95537e-928b-43be-9e29-06f8f35702ac",
-            "Description": "Check 'JokeEmailFromDan' to be 'True'",
-            "CustomDescription": "Check 'JokeEmailFromDan' to be 'True' (uses XPath to locate specific message)",
+            "Runtime ID": "d7aba355-6090-4abf-85d4-ed5996b3c78b",
+            "Description": "Execute test 'MonkeyHelper_Verify'",
+            "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CheckActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "CheckedState": true,
-                "InvokeOnClick": true,
-                "InvokeOnChange": false,
-                "UsejQuery": true,
-                "UseBackupSearch": true,
-                "ClosesBrowser": false,
-                "AjaxTimeout": 0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_Verify",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_Verify.tstest",
+                "TestUniqueId": "e7b28d98-2203-4c11-b96d-a94a742ca8dd",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "checkBox": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "checkBox",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://localhost:8080/Inbox.html",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "nToNTvf6xfEqbk1gfSTZ11Xb5dM=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "JokeEmailFromDan",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "XPath=//td[@class=\"mailinfo\" and text()=\"Oh this is funny\"]/../td/input[@type=\"checkbox\"]"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[2]/table[1]/tbody[1]/tr[4]/td[1]/input[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlInputCheckBox",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -279,7 +141,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "A Perf Testwsnr420e.sqj",
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletiona0bceswl.wxw",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -288,97 +150,26 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "60ffb380-0971-4b8a-b175-3b8f1e47aa82",
-            "Description": "Click 'SENDSELECTEDDiv'",
-            "CustomDescription": null,
+            "Runtime ID": "729fc511-859e-497d-98b5-0d63dda20eb1",
+            "Description": "[Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep] : Configuration step for click on header send button",
+            "CustomDescription": "Configuration step for click on checkbox with text 'Daniel Grey' and 'Oh this is funny'",
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ClickActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "SimulateRealClick": false,
-                "UsejQuery": true,
-                "UseBackupSearch": true,
-                "ClosesBrowser": false,
-                "AjaxTimeout": 0,
-                "Pause": 0,
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//tr[.//*[text()='Daniel Grey']/../text()[.='Oh this is funny']]/td/input\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "target": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "target",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "inbox/",
-                          "Query": "",
-                          "BaseUrl": "http://localhost:8080/",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample1"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "+UVPOvI+7UCnu8vbyRbfyFbMdgM=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "SENDSELECTEDDiv",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "TextContent=^SEND SELECTED I"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=div"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[10]/div[2]/div[1]/div[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -387,10 +178,10 @@
             },
             "Enabled": true,
             "Order": 4,
-            "Id": "",
-            "StepState": 0,
+            "Id": "Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep",
+            "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionts5fdgp5.jzy",
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletion2jihqtai.rnw",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -399,101 +190,28 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "46b4d226-ad52-4fe9-af80-be734fa05018",
-            "Description": "Verify 'TextContent' 'Contains' 'Inbox folder (15)' on 'StatusPTag'",
+            "Runtime ID": "e29a0671-0339-4766-b648-c1060ae061ba",
+            "Description": "Execute test 'MonkeyHelper_ClickOnElement'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ContentVerificationDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "CompareType": 2,
-                "SegmentType": 3,
-                "ExpectedString": "Inbox folder (15)",
-                "UseBackupSearch": true,
-                "DataBindVariableName": null,
-                "Timeout": 30000,
-                "CheckInterval": 500,
-                "EnsureStateIsCurrent": false,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_ClickOnElement",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.tstest",
+                "TestUniqueId": "cb634b76-20ed-4da7-a362-60b6a9a3d00d",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "textTarget": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "textTarget",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://localhost:8080/Inbox.html",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "nbRLQkyaL2A4vD2ibVB3QWEg6Ug=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "StatusPTag",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=p"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=status"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[1]/p[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlControl",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 2,
+                "Elements": {},
+                "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {}
@@ -504,7 +222,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "A Perf Testugzzlfws.ubp",
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionbye5r0cp.3k2",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -513,101 +231,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "482123ef-7855-413b-bede-283a83144a1c",
-            "Description": "Verify 'TextContent' 'Contains' 'Another good TS guide' on 'x1TableCell'",
-            "CustomDescription": null,
+            "Runtime ID": "1ef601d7-c7b3-4f66-b97f-0b41928886c7",
+            "Description": "[Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep2] : Configuration step for click on header send button",
+            "CustomDescription": "Configuration step for click on delete message.",
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ContentVerificationDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "CompareType": 2,
-                "SegmentType": 3,
-                "ExpectedString": "Another good TS guide",
-                "UseBackupSearch": true,
-                "DataBindVariableName": null,
-                "Timeout": 30000,
-                "CheckInterval": 500,
-                "EnsureStateIsCurrent": false,
-                "Pause": 0,
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[contains(@onclick,'deleteEngaged')]\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "textTarget": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "textTarget",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://localhost:8080/Inbox.html",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "AItHR8UPGC0fey4RB2xl29X1R7E=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "x1TableCell0",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "TextContent=^Another good TS"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=td"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[2]/table[1]/tbody[1]/tr[6]/td[2]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlTableCell",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 2,
+                "Elements": {},
+                "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {}
@@ -615,10 +259,10 @@
             },
             "Enabled": true,
             "Order": 6,
-            "Id": "",
-            "StepState": 0,
+            "Id": "Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep2",
+            "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "A Perf Testdcrf1rnu.2bc",
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionxsjkzypm.5yk",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -627,97 +271,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "8fb9a401-8847-4a49-8c4b-eb7331e2362e",
-            "Description": "Click 'TrashIconPngImage'",
+            "Runtime ID": "76494b80-1c6d-4228-94a0-9c8c63a59f78",
+            "Description": "Execute test 'MonkeyHelper_ClickOnElement'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ClickActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "SimulateRealClick": false,
-                "UsejQuery": true,
-                "UseBackupSearch": true,
-                "ClosesBrowser": false,
-                "AjaxTimeout": 0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_ClickOnElement",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.tstest",
+                "TestUniqueId": "cb634b76-20ed-4da7-a362-60b6a9a3d00d",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "target": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "target",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "inbox/",
-                          "Query": "",
-                          "BaseUrl": "http://localhost:8080/",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample1"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "FxHjWcoYfT6d/o9ORPOS9vdhu4A=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "TrashIconPngImage",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "src=../images/trash_icon.png"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=img"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[1]/div[1]/div[5]/img[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlImage",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -729,7 +303,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionmjdxvqv2.z1l",
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletion43mtg4nz.qjt",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -738,99 +312,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "908eedc8-5517-4a0c-8f7e-d295fbc4a59f",
-            "Description": "Verify element 'Dan's Joke Email Message' 'is' visible.",
-            "CustomDescription": "Verify element 'Dan's Joke Email Message' 'is' visible in the trash.",
+            "Runtime ID": "f56cc8bd-d02b-498b-b809-70aca1963700",
+            "Description": "[Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep3] : Configuration step for verify text contains 'Inbox folder (16)' on status",
+            "CustomDescription": "Configuration step for verify text contains 'Inbox folder (15)' on status",
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.VisibleVerificationDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "IsVisible": true,
-                "UseBackupSearch": true,
-                "DataBindVariableName": null,
-                "Timeout": 30000,
-                "CheckInterval": 500,
-                "EnsureStateIsCurrent": false,
-                "Pause": 0,
+                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='status' and text()='Inbox folder (15)']\",\r\n            };\r\n            SetExtractedValue(\"VerifyModel\", verify);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "verifyTarget": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "verifyTarget",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "http://localhost:8080/Inbox.html",
-                          "Query": "",
-                          "BaseUrl": "",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "g7535PtYPM3qD8jGpJkdUyUGibk=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "Dan's Joke Email Message",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=td"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "TextContent=^Oh this is funny"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[5]/table[1]/tbody[1]/tr[2]/td[2]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlTableCell",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 2,
+                "Elements": {},
+                "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {}
@@ -838,10 +340,294 @@
             },
             "Enabled": true,
             "Order": 8,
+            "Id": "Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep3",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletiontlv4w1fo.n4w",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "85625ca5-b886-47aa-8021-273143e80b4c",
+            "Description": "Execute test 'MonkeyHelper_Verify'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_Verify",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_Verify.tstest",
+                "TestUniqueId": "e7b28d98-2203-4c11-b96d-a94a742ca8dd",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "test 53wgdmac3.gpw",
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletiongi2yptpo.xgf",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "c7c99ab1-0eb3-4009-ac33-77016e17aab8",
+            "Description": "[Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep4] : Configuration step for verify text contains 'Inbox folder (16)' on status",
+            "CustomDescription": "Configuration step for verify text contains 'Another good TS guide' on InboxTable",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[text()='Another good TS guide']\",\r\n            };\r\n            SetExtractedValue(\"VerifyModel\", verify);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 10,
+            "Id": "Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep4",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionj1yequze.qzc",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6457dd26-c2e5-4858-9698-318609bff4a8",
+            "Description": "Execute test 'MonkeyHelper_Verify'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_Verify",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_Verify.tstest",
+                "TestUniqueId": "e7b28d98-2203-4c11-b96d-a94a742ca8dd",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 11,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionqp4jn1ky.vnb",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7b76c57e-a794-4ef5-a7a9-e1600535f163",
+            "Description": "[Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep5] : Configuration step for click on header send button",
+            "CustomDescription": "Configuration step for click on header Trash button",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='trash_button']\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 12,
+            "Id": "Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep5",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionks3epklw.c0u",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "053d3438-da0a-4e14-a69b-5ff37f9b0b9a",
+            "Description": "Execute test 'MonkeyHelper_ClickOnElement'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_ClickOnElement",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.tstest",
+                "TestUniqueId": "cb634b76-20ed-4da7-a362-60b6a9a3d00d",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 13,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionuizgci3c.tk5",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "70d166d1-86f8-48ee-857a-ebecb1b1286f",
+            "Description": "[Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep6] : Configuration step for verify text contains 'Another good TS guide' on InboxTable",
+            "CustomDescription": "Configuration step for verify text 'Daniel Grey' and 'Oh this is funny'",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//tr[.//*[text()='Daniel Grey']/../text()[.='Oh this is funny']]/td/input\",\r\n            };\r\n            SetExtractedValue(\"VerifyModel\", verify);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 14,
+            "Id": "Test_5__Choose_specifc_item_from_a_grid_and_delete_it_verify_deletion_CodedStep6",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletionzqwxc13d.u55",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "e8df04f6-8131-4ab3-a373-b8445b6e1bad",
+            "Description": "Execute test 'MonkeyHelper_Verify'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_Verify",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_Verify.tstest",
+                "TestUniqueId": "e7b28d98-2203-4c11-b96d-a94a742ca8dd",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 15,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #5 - Choose specifc item from a grid and delete it, verify deletion5zgkxk5g.f0d",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -859,12 +645,12 @@
     "SilverlightAppOriginUri": null,
     "WpfAppPath": null,
     "UseDefaultWpfAppPath": false,
-    "TestAssembly": "new-test-project.dll",
+    "TestAssembly": "MonkeyTests.dll",
     "TestAssemblyPath": "bin",
-    "TestClass": "",
+    "TestClass": "MonkeyTests.Test__5___Choose_specifc_item_from_a_grid_and_delete_it__verify_deletion",
     "IsManual": false,
     "ResourceFilePath": "TestsForWebDemoProject\\Test #5 - Choose specifc item from a grid and delete it, verify deletion.resx",
-    "HasCodeBehind": false,
+    "HasCodeBehind": true,
     "DataInfo": {
       "__type": "ArtOfTest.Common.Design.Data.DataInfo",
       "__value": {
