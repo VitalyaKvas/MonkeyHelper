@@ -18,7 +18,9 @@
       "Telerik.WebAii.Controls.Html, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "Telerik.WebAii.Controls.Xaml, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "Telerik.WebAii.Controls.Xaml.Wpf, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.TestingFramework.Controls.KendoUI, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45"
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
     ],
     "Steps": {
       "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
@@ -109,97 +111,26 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "68325570-9c30-4c09-a923-4371104015c7",
-            "Description": "Click 'SENDSELECTEDDiv'",
-            "CustomDescription": null,
+            "Runtime ID": "a2599eb7-107f-4a1e-8936-3fa0cd736f37",
+            "Description": "[Test_6__Delete_multiple_messages_verify_deletion_CodedStep] : Configuration step for click on delete message.",
+            "CustomDescription": "Configuration step for click on delete message.",
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ClickActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "SimulateRealClick": false,
-                "UsejQuery": true,
-                "UseBackupSearch": true,
-                "ClosesBrowser": false,
-                "AjaxTimeout": 0,
-                "Pause": 0,
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[contains(@onclick,'deleteEngaged')]\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "target": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "target",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "inbox/",
-                          "Query": "",
-                          "BaseUrl": "http://localhost:8080/",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample1"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "+UVPOvI+7UCnu8vbyRbfyFbMdgM=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "SENDSELECTEDDiv",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "TextContent=^SEND SELECTED I"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=div"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[10]/div[2]/div[1]/div[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -208,10 +139,10 @@
             },
             "Enabled": true,
             "Order": 3,
-            "Id": "",
-            "StepState": 0,
+            "Id": "Test_6__Delete_multiple_messages_verify_deletion_CodedStep",
+            "StepState": 1,
             "ContinueOnFailure": false,
-            "StepImageKey": "Test #6 - Delete multiple messages, verify deletionctwhnls3.3ve",
+            "StepImageKey": "Test #6 - Delete multiple messages, verify deletionpaaymyv4.ozz",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -220,97 +151,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "dcf77563-8718-47c8-bd12-ac83562ea463",
-            "Description": "Click 'TrashButtonDiv'",
+            "Runtime ID": "f31ca04a-e9e7-4406-8caa-dc771a5564ac",
+            "Description": "Execute test 'MonkeyHelper_ClickOnElement'",
             "CustomDescription": null,
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ClickActionDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
               "__value": {
-                "SimulateRealClick": false,
-                "UsejQuery": true,
-                "UseBackupSearch": true,
-                "ClosesBrowser": false,
-                "AjaxTimeout": 0,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 30000,
+                "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
-                "WaitOnElements": true,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_ClickOnElement",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.tstest",
+                "TestUniqueId": "cb634b76-20ed-4da7-a362-60b6a9a3d00d",
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "target": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "target",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": "inbox/",
-                          "Query": "",
-                          "BaseUrl": "http://localhost:8080/",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 2,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample1"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "nnvBQXtvYKdo8EzOKLifZPReM+A=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "TrashButtonDiv",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=trash_button"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=div"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[1]/div[1]/div[5]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlDiv",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
+                "Elements": {},
                 "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
@@ -322,7 +183,7 @@
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "Test #6 - Delete multiple messages, verify deletion1cvtwi4y.hfe",
+            "StepImageKey": "Test #6 - Delete multiple messages, verify deletion455akhcc.gky",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200
@@ -331,101 +192,27 @@
         {
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
-            "Runtime ID": "a209fbfa-75ed-439a-836d-b29eec78640b",
-            "Description": "Verify 'TextContent' 'Contains' 'Trash folder (4)' on 'StatusPTag'",
-            "CustomDescription": null,
+            "Runtime ID": "2f15d323-b3eb-4f5f-a299-db0e288df2ac",
+            "Description": "[Test_6__Delete_multiple_messages_verify_deletion_CodedStep1] : Configuration step for click on header Trash button",
+            "CustomDescription": "Configuration step for click on header Trash button",
             "Step": {
-              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ContentVerificationDescriptor",
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "CompareType": 2,
-                "SegmentType": 3,
-                "ExpectedString": "Trash folder (4)",
-                "UseBackupSearch": true,
-                "DataBindVariableName": null,
-                "Timeout": 10000,
-                "CheckInterval": 500,
-                "EnsureStateIsCurrent": false,
-                "Pause": 0,
-                "WaitOnElementsTimeout": 10000,
-                "UseStepWaitOnElementsTimout": false,
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='trash_button']\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
+                "RequiresSilverlight": false,
                 "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
                 "RunsAgainstVersion": "",
                 "Constraints": {
                   "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
                   "__value": {
-                    "ConstraintValues": {
-                      "RunsAgainstVersion": ""
-                    }
+                    "ConstraintValues": {}
                   }
                 },
-                "Elements": {
-                  "textTarget": {
-                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
-                    "__value": {
-                      "Name": "textTarget",
-                      "Region": null,
-                      "Page": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
-                        "__value": {
-                          "Path": null,
-                          "Query": "",
-                          "BaseUrl": "C:\\Users\\stoichev\\WebstormProjects\\EmailServicemark3 - Copy 6.11\\Inbox.html",
-                          "EquivalentUrls": [],
-                          "Fragment": "",
-                          "Title": "Telerik Sample",
-                          "CompareMode": 1,
-                          "AlwaysUseTitleInCompare": false,
-                          "FriendlyName": "TelerikSample0"
-                        }
-                      },
-                      "Frame": null,
-                      "FindInfo": null,
-                      "FindExpression": {
-                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
-                        "__value": {
-                          "uniqueKey": "nbRLQkyaL2A4vD2ibVB3QWEg6Ug=",
-                          "NodeKind": 4,
-                          "TechnologyType": 1,
-                          "Name": "StatusPTag",
-                          "FindExpressions": [
-                            {
-                              "Key": 1,
-                              "Value": {
-                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
-                                "__value": {
-                                  "Clauses": [
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "id=status"
-                                      }
-                                    },
-                                    {
-                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
-                                      "__value": {
-                                        "Clause": "tagname=p"
-                                      }
-                                    }
-                                  ],
-                                  "Constraints": [],
-                                  "ChainStops": []
-                                }
-                              }
-                            }
-                          ],
-                          "BackupSearchClause": "/html[1]/body[1]/div[1]/p[1]",
-                          "DataBindingExpressions": {}
-                        }
-                      },
-                      "HtmlControlType": "ArtOfTest.WebAii.Controls.HtmlControls.HtmlControl",
-                      "IsIndependent": false,
-                      "DomStateKey": "",
-                      "TechnologyType": 1,
-                      "Version": 200
-                    }
-                  }
-                },
-                "StepType": 2,
+                "Elements": {},
+                "StepType": 4,
                 "LogMessageOnFailure": "",
                 "EditorType": "",
                 "DataBindingExpressions": {}
@@ -433,10 +220,132 @@
             },
             "Enabled": true,
             "Order": 5,
+            "Id": "Test_6__Delete_multiple_messages_verify_deletion_CodedStep1",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #6 - Delete multiple messages, verify deletiongtgfj4s5.g4d",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "a709c176-63b0-498b-b369-d48802f564e2",
+            "Description": "Execute test 'MonkeyHelper_ClickOnElement'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_ClickOnElement",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_ClickOnElement.tstest",
+                "TestUniqueId": "cb634b76-20ed-4da7-a362-60b6a9a3d00d",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
             "Id": "",
             "StepState": 0,
             "ContinueOnFailure": false,
-            "StepImageKey": "WebTest(3)a5qqykqz.igc",
+            "StepImageKey": "Test #6 - Delete multiple messages, verify deletion0kkc0apg.zsx",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "7479a28f-7d17-486c-b6ef-0c4a259d7e59",
+            "Description": "[Test_6__Delete_multiple_messages_verify_deletion_CodedStep2] : Configuration step for verify text contains 'Inbox folder (15)' on status",
+            "CustomDescription": "Configuration step for verify text contains 'Trash folder (4)' on status",
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
+              "__value": {
+                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='status' and text()='Trash folder (4)']\",\r\n            };\r\n            SetExtractedValue(\"VerifyModel\", verify);",
+                "RequiresSilverlight": false,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "Test_6__Delete_multiple_messages_verify_deletion_CodedStep2",
+            "StepState": 1,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #6 - Delete multiple messages, verify deletionjgofjrsw.zm0",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "b3600409-33c1-464a-91d9-0b4bc4c19127",
+            "Description": "Execute test 'MonkeyHelper_Verify'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
+              "__value": {
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "TestName": "MonkeyHelper_Verify",
+                "TestPath": "MonkeyHelper\\Steps\\MonkeyHelper_Verify.tstest",
+                "TestUniqueId": "e7b28d98-2203-4c11-b96d-a94a742ca8dd",
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Test #6 - Delete multiple messages, verify deletionqdxumatt.ljl",
             "QcId": 0,
             "QcVersionStamp": 0,
             "Version": 200

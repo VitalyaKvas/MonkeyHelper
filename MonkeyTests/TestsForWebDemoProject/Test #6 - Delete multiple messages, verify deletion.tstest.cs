@@ -91,5 +91,38 @@ namespace MonkeyTests
             
             
         }
+    
+        [CodedStep(@"Configuration step for click on delete message.")]
+        public void Test_6__Delete_multiple_messages_verify_deletion_CodedStep()
+        {
+            var useMouse = new ClickOnElementModel()
+            {
+                SearchOption = SearchOptionModel.ByXPath,
+                Selection = ".//*[contains(@onclick,'deleteEngaged')]",
+            };
+            SetExtractedValue("ClickOnElementModel", useMouse);
+        }
+    
+        [CodedStep(@"Configuration step for click on header Trash button")]
+        public void Test_6__Delete_multiple_messages_verify_deletion_CodedStep1()
+        {
+            var useMouse = new ClickOnElementModel()
+            {
+                SearchOption = SearchOptionModel.ByXPath,
+                Selection = ".//*[@id='trash_button']",
+            };
+            SetExtractedValue("ClickOnElementModel", useMouse);
+        }
+    
+        [CodedStep(@"Configuration step for verify text contains 'Inbox folder (15)' on status")]
+        public void Test_6__Delete_multiple_messages_verify_deletion_CodedStep2()
+        {
+            var verify = new VerifyModel()
+            {
+                SearchOption = SearchOptionModel.ByXPath,
+                Selection = ".//*[@id='status' and text()='Trash folder (4)']",
+            };
+            SetExtractedValue("VerifyModel", verify);
+        }
     }
 }
