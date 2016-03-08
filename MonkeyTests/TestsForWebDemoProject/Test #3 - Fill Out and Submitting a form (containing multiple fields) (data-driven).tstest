@@ -18,7 +18,9 @@
       "Telerik.WebAii.Controls.Html, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "Telerik.WebAii.Controls.Xaml, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
       "Telerik.WebAii.Controls.Xaml.Wpf, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.TestingFramework.Controls.KendoUI, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45"
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2013.1.530.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
     ],
     "Steps": {
       "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
@@ -27,7 +29,7 @@
           "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
           "__value": {
             "Runtime ID": "779f093c-7cc6-4ae0-bfcd-d7afa6a12fb7",
-            "Description": "Execute test 'Login with correct credentials.tstest'",
+            "Description": "Execute test 'Login with correct credentials'",
             "CustomDescription": null,
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.ExecuteTestActionDescriptor",
@@ -35,7 +37,7 @@
                 "WaitOnElementsTimeout": 0,
                 "UseStepWaitOnElementsTimout": false,
                 "WaitOnElements": false,
-                "TestName": "Login with correct credentials.tstest",
+                "TestName": "Login with correct credentials",
                 "TestPath": "TestsForWebDemoProject\\nested test steps\\Login with correct credentials.tstest",
                 "TestUniqueId": "e7445f6a-2a31-4490-8a01-e3ad8c6b9a61",
                 "Pause": 0,
@@ -260,7 +262,7 @@
     "SilverlightAppOriginUri": null,
     "WpfAppPath": null,
     "UseDefaultWpfAppPath": false,
-    "TestAssembly": "new-test-project.dll",
+    "TestAssembly": "MonkeyTests.dll",
     "TestAssemblyPath": "bin",
     "TestClass": "",
     "IsManual": false,
