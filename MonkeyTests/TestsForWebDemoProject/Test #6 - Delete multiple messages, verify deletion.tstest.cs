@@ -18,33 +18,6 @@ using ArtOfTest.WebAii.Silverlight.UI;
 
 namespace MonkeyTests
 {
-
-    //
-    // You can add custom execution steps by simply
-    // adding a void function and decorating it with the [CodedStep] 
-    // attribute to the test method. 
-    // Those steps will automatically show up in the test steps on save.
-    //
-    // The BaseWebAiiTest exposes all key objects that you can use
-    // to access the current testcase context. [i.e. ActiveBrowser, Find ..etc]
-    //
-    // Data driven tests can use the Data[columnIndex] or Data["columnName"] 
-    // to access data for a specific data iteration.
-    //
-    // Example:
-    //
-    // [CodedStep("MyCustom Step Description")]
-    // public void MyCustomStep()
-    // {
-    //        // Custom code goes here
-    //      ActiveBrowser.NavigateTo("http://www.google.com");
-    //
-    //        // Or
-    //        ActiveBrowser.NavigateTo(Data["url"]);
-    // }
-    //
-        
-
     public class Test__6___Delete_multiple_messages__verify_deletion : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
@@ -87,9 +60,6 @@ namespace MonkeyTests
                     checkb.MouseClick();  // MouseClick rather than Click so any existing events will be fired
                 }
             }
-            
-            
-            
         }
     
         [CodedStep(@"Configuration step for click on delete message.")]

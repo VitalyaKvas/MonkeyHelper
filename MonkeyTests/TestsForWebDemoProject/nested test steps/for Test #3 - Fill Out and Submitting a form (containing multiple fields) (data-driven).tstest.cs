@@ -66,7 +66,7 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//*[@id='mailinfo']/input[1]",
+                Selection = ".//*[@id='mailinfo']/input[1]",
                 MakeСleaningOldText = true,
                 TextForEntering = to,
             };
@@ -83,7 +83,7 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//*[@id='mailinfo']/div/input",
+                Selection = ".//*[@id='mailinfo']/div/input",
                 MakeСleaningOldText = true,
                 TextForEntering = subject,
             };
@@ -100,7 +100,7 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//td[@class='k-editable-area']/iframe",
+                Selection = ".//td[@class='k-editable-area']/iframe",
                 MakeСleaningOldText = false,
                 TextForEntering = text,
             };

@@ -64,7 +64,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//*[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"george\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            // ExecuteTest(Constans.EnterText);",
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"george\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            // ExecuteTest(Constans.EnterText);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -145,7 +145,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//*[@id='password']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"unknown\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);",
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='password']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"unknown\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

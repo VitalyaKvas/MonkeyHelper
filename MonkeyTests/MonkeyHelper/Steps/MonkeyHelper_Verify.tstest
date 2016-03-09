@@ -23,7 +23,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[test()='Test']\",\r\n            };\r\n            SetExtractedValue(\"VerifyModel\", verify);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.Verify);",
+                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[test()='Test']\",\r\n            };\r\n            SetExtractedValue(\"VerifyModel\", verify);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.Verify);\r\n            // or \r\n            // verify.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

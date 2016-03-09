@@ -23,7 +23,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//input[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"LoginName\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.EnterText);",
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//input[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"LoginName\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.EnterText);\r\n            // or \r\n            // enteringText.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -63,7 +63,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            \r\n            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = enteringText.SearchOption,\r\n                Selection = enteringText.SelectionForElement,\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
+                "Code": "            var enteringText = this.GetExtractedValue<EnteringTextModel>(\"EnteringTextModel\");\r\n            \r\n            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = enteringText.SearchOption,\r\n                Selection = enteringText.Selection,\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

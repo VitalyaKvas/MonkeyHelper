@@ -326,7 +326,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login_button']\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);\r\n            \r\n            ExecuteTest(Constans.ClickOnElement);",
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login_button']\",\r\n            };\r\n            \r\n            useMouse.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

@@ -75,7 +75,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//*[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"Telerik\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            ExecuteTest(Constans.EnterText);",
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"Telerik\",\r\n            };\r\n\r\n            enteringText.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -115,7 +115,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//*[@id='password']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"abc123\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            ExecuteTest(Constans.EnterText);",
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='password']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"abc123\",\r\n            };\r\n\r\n            enteringText.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -155,7 +155,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login_button']\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);\r\n            \r\n            ExecuteTest(Constans.ClickOnElement);",
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login_button']\",\r\n            };\r\n\r\n            useMouse.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -195,7 +195,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var waitForElement = new WaitForElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='signin']/p[contains(text(),'Welcome')]\",\r\n                How = WaitForElementModel.HowWait.ForVisible,\r\n            };\r\n            SetExtractedValue(\"WaitForElementModel\", waitForElement);\r\n            \r\n            ExecuteTest(Constans.WaitForElement);",
+                "Code": "            var waitForElement = new WaitForElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='signin']/p[contains(text(),'Welcome')]\",\r\n                How = WaitForElementModel.HowWait.ForVisible,\r\n            };\r\n\r\n            waitForElement.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

@@ -21,13 +21,22 @@ using System.Diagnostics;
 namespace MonkeyTests
 {
     [Serializable]
-    public class WaitForElementModel
+    public class WaitForElementModel : BaseModel
     {
-        public SearchOptionModel SearchOption { get; set; }
-        public string Selection { get; set; }
         public int Timeout { get; set; }
         public int Interval { get; set; }
         public HowWait How { get; set; }
+        
+        public override string RelativeTestPath()
+        {
+            return Constans.WaitForElement;
+        }
+        
+        public override void ExecuteTest(BaseWebAiiTest webAii)
+        {
+            webAii.SetExtractedValue("WaitForElementModel", this);
+            base.ExecuteTest(webAii);
+        }
         
         public WaitForElementModel()
         {
@@ -35,12 +44,6 @@ namespace MonkeyTests
             Timeout = 60000;
             Interval = 500;
             How = HowWait.ForVisible;
-        }
-        
-        public string GetXPath(Log log)
-        {
-            var xPath = SearchOption.GetXPath(Selection, log);
-            return xPath;
         }
         
         public enum HowWait
@@ -95,6 +98,8 @@ namespace MonkeyTests
             // Use auto step 
             // or
             // ExecuteTest(Constans.WaitForElement);
+            // or 
+            // waitForElement.ExecuteTest(this);
         }
     
         [CodedStep(@"Wait for visible element")]

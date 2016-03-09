@@ -52,7 +52,7 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//*[@id='login']",
+                Selection = ".//*[@id='login']",
                 MakeСleaningOldText = true,
                 TextForEntering = "Telerik",
             };
@@ -66,7 +66,7 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//*[@id='password']",
+                Selection = ".//*[@id='password']",
                 MakeСleaningOldText = true,
                 TextForEntering = "abc123",
             };

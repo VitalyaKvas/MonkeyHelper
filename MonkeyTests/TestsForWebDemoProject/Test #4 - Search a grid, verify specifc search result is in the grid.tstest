@@ -75,7 +75,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//*[@id='searchfield']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"Automation Myths\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);",
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='searchfield']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"Automation Myths\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

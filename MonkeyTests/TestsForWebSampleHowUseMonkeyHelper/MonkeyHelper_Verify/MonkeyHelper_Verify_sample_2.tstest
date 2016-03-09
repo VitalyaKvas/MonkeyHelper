@@ -64,7 +64,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//*[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"george\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            ExecuteTest(Constans.EnterText);",
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"george\",\r\n            };\r\n\r\n            enteringText.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -104,7 +104,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                SelectionForElement = \".//*[@id='password']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"unknown\",\r\n            };\r\n            \r\n            SetExtractedValue(\"EnteringTextModel\", enteringText);\r\n            \r\n            ExecuteTest(Constans.EnterText);",
+                "Code": "            var enteringText = new EnteringTextModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='password']\",\r\n                MakeСleaningOldText = true,\r\n                TextForEntering = \"unknown\",\r\n            };\r\n\r\n            enteringText.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -144,7 +144,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login_button']\",\r\n            };\r\n            SetExtractedValue(\"ClickOnElementModel\", useMouse);\r\n            \r\n            ExecuteTest(Constans.ClickOnElement);",
+                "Code": "            var useMouse = new ClickOnElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[@id='login_button']\",\r\n            };\r\n\r\n            useMouse.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -184,7 +184,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//p[contains(text(),'Incorrect user/password')]\",\r\n            };\r\n            SetExtractedValue(\"VerifyModel\", verify);\r\n            \r\n            ExecuteTest(Constans.Verify);",
+                "Code": "            var verify = new VerifyModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//p[contains(text(),'Incorrect user/password')]\",\r\n            };\r\n\r\n            verify.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,

@@ -19,15 +19,17 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace MonkeyTests
 {
     [Serializable]
-    public class VerifyModel
+    public class VerifyModel : BaseModel 
     {
-        public SearchOptionModel SearchOption { get; set; }
-        public string Selection { get; set; }
-        
-        public string GetXPath(Log log)
+        public override string RelativeTestPath()
         {
-            var xPath = SearchOption.GetXPath(Selection, log);
-            return xPath;
+            return Constans.Verify;
+        }
+        
+        public override void ExecuteTest(BaseWebAiiTest webAii)
+        {
+            webAii.SetExtractedValue("VerifyModel", this);
+            base.ExecuteTest(webAii);
         }
     }
     
@@ -71,8 +73,10 @@ namespace MonkeyTests
             // Use auto step 
             // or
             // ExecuteTest(Constans.Verify);
+            // or 
+            // verify.ExecuteTest(this);
         }
-    
+        
         [CodedStep(@"New Coded Step")]
         public void MonkeyHelper_Verify_CodedStep()
         {

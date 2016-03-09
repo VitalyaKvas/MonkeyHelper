@@ -54,9 +54,8 @@ namespace MonkeyTests
                 SearchOption = SearchOptionModel.ByXPath,
                 Selection = ".//*[@id='login_button']",
             };
-            SetExtractedValue("ClickOnElementModel", useMouse);
             
-            ExecuteTest(Constans.ClickOnElement);
+            useMouse.ExecuteTest(this);
         }
     }
 }

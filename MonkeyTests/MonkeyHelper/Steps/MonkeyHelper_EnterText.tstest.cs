@@ -19,17 +19,20 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace MonkeyTests
 {
     [Serializable]
-    public class EnteringTextModel
+    public class EnteringTextModel : BaseModel
     {
-        public SearchOptionModel SearchOption { get; set; }
-        public string SelectionForElement { get; set; }
         public bool MakeСleaningOldText { get; set; }
         public string TextForEntering { get; set; }
         
-        public string GetXPath(Log log)
+        public override string RelativeTestPath()
         {
-            var xPath = SearchOption.GetXPath(SelectionForElement, log);
-            return xPath;
+            return Constans.EnterText;
+        }
+        
+        public override void ExecuteTest(BaseWebAiiTest webAii)
+        {
+            webAii.SetExtractedValue("EnteringTextModel", this);
+            base.ExecuteTest(webAii);
         }
     }
 
@@ -66,7 +69,7 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//input[@id='login']",
+                Selection = ".//input[@id='login']",
                 MakeСleaningOldText = true,
                 TextForEntering = "LoginName",
             };
@@ -76,6 +79,8 @@ namespace MonkeyTests
             // Use auto step 
             // or
             // ExecuteTest(Constans.EnterText);
+            // or 
+            // enteringText.ExecuteTest(this);
         }
     
         [CodedStep(@"Click on input")]
@@ -86,7 +91,7 @@ namespace MonkeyTests
             var useMouse = new ClickOnElementModel()
             {
                 SearchOption = enteringText.SearchOption,
-                Selection = enteringText.SelectionForElement,
+                Selection = enteringText.Selection,
             };
             SetExtractedValue("ClickOnElementModel", useMouse);
         }

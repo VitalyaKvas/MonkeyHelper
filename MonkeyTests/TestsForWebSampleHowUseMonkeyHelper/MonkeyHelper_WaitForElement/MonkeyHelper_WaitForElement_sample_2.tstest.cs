@@ -52,14 +52,12 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//*[@id='login']",
+                Selection = ".//*[@id='login']",
                 MakeСleaningOldText = true,
                 TextForEntering = "Telerik",
             };
-            
-            SetExtractedValue("EnteringTextModel", enteringText);
-            
-            ExecuteTest(Constans.EnterText);
+
+            enteringText.ExecuteTest(this);
         }
     
         [CodedStep(@"Enter text in password")]
@@ -68,14 +66,12 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//*[@id='password']",
+                Selection = ".//*[@id='password']",
                 MakeСleaningOldText = true,
                 TextForEntering = "abc123",
             };
-            
-            SetExtractedValue("EnteringTextModel", enteringText);
-            
-            ExecuteTest(Constans.EnterText);
+
+            enteringText.ExecuteTest(this);
         }
     
         [CodedStep(@"Click on login button")]
@@ -86,9 +82,8 @@ namespace MonkeyTests
                 SearchOption = SearchOptionModel.ByXPath,
                 Selection = ".//*[@id='login_button']",
             };
-            SetExtractedValue("ClickOnElementModel", useMouse);
-            
-            ExecuteTest(Constans.ClickOnElement);
+
+            useMouse.ExecuteTest(this);
         }
     
         [CodedStep(@"Configuration step for wait element")]
@@ -100,9 +95,8 @@ namespace MonkeyTests
                 Selection = ".//*[@id='signin']/p[contains(text(),'Welcome')]",
                 How = WaitForElementModel.HowWait.ForVisible,
             };
-            SetExtractedValue("WaitForElementModel", waitForElement);
-            
-            ExecuteTest(Constans.WaitForElement);
+
+            waitForElement.ExecuteTest(this);
         }
     }
 }

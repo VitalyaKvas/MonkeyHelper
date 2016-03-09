@@ -23,7 +23,7 @@
             "Step": {
               "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.CodedStepDescriptor",
               "__value": {
-                "Code": "            var waitForElement = new WaitForElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[test()='Test']\",\r\n                Timeout = 60000,\r\n                Interval = 500,\r\n                How = WaitForElementModel.HowWait.ForVisible,\r\n            };\r\n            SetExtractedValue(\"WaitForElementModel\", waitForElement);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.WaitForElement);",
+                "Code": "            var waitForElement = new WaitForElementModel()\r\n            {\r\n                SearchOption = SearchOptionModel.ByXPath,\r\n                Selection = \".//*[test()='Test']\",\r\n                Timeout = 60000,\r\n                Interval = 500,\r\n                How = WaitForElementModel.HowWait.ForVisible,\r\n            };\r\n            SetExtractedValue(\"WaitForElementModel\", waitForElement);\r\n            \r\n            // Use auto step \r\n            // or\r\n            // ExecuteTest(Constans.WaitForElement);\r\n            // or \r\n            // waitForElement.ExecuteTest(this);",
                 "RequiresSilverlight": false,
                 "WaitOnElements": true,
                 "WaitOnElementsTimeout": 30000,
@@ -141,7 +141,7 @@
     "TestLinks": [],
     "Description": "",
     "Name": "MonkeyHelper_WaitForElement",
-    "Owner": null,
+    "Owner": "",
     "Path": "MonkeyHelper\\Steps\\MonkeyHelper_WaitForElement.tstest",
     "Priority": 0,
     "TestType": 0,

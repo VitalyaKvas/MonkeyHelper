@@ -52,7 +52,7 @@ namespace MonkeyTests
             var enteringText = new EnteringTextModel()
             {
                 SearchOption = SearchOptionModel.ByXPath,
-                SelectionForElement = ".//*[@id='searchfield']",
+                Selection = ".//*[@id='searchfield']",
                 MakeСleaningOldText = true,
                 TextForEntering = "Automation Myths",
             };

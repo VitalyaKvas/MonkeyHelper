@@ -19,10 +19,18 @@ using ArtOfTest.WebAii.Silverlight.UI;
 namespace MonkeyTests
 {
     [Serializable]
-    public class ClickOnElementModel
+    public class ClickOnElementModel : BaseModel
     {
-        public SearchOptionModel SearchOption { get; set; }
-        public string Selection { get; set; }
+        public override string RelativeTestPath()
+        {
+            return Constans.ClickOnElement;
+        }
+        
+        public override void ExecuteTest(BaseWebAiiTest webAii)
+        {
+            webAii.SetExtractedValue("ClickOnElementModel", this);
+            base.ExecuteTest(webAii);
+        }
     }
 
     public class MonkeyHelper_ClickOnElement : BaseWebAiiTest
@@ -65,6 +73,8 @@ namespace MonkeyTests
             // Use auto step 
             // or
             // ExecuteTest(Constans.ClickOnElement);
+            // or 
+            // useMouse.ExecuteTest(this);
         }
     
         [CodedStep(@"Click on element")]
