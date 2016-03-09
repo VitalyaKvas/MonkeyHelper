@@ -1,0 +1,134 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.Execution.TestList",
+  "__value": {
+    "TestListId": "c34a5c65-bd74-43bd-8e86-943084f061ba",
+    "Id": "c34a5c65-bd74-43bd-8e86-943084f061ba",
+    "TestListName": "Monkey helper",
+    "CreationDate": "2016-03-09T22:57:51",
+    "OwnerName": null,
+    "Settings": {
+      "__type": "ArtOfTest.WebAii.Core.Settings",
+      "__value": {
+        "Web": {
+          "__type": "ArtOfTest.WebAii.Core.Settings+WebSettings",
+          "__value": {
+            "IsProfilingExecution": false,
+            "ExecutingBrowsers": [],
+            "UseMultiBrowserExecution": false,
+            "RecycleBrowser": false,
+            "AspNetDevServerPort": -1,
+            "LocalWebServer": 0,
+            "EnableUILessRequestViewing": false,
+            "WebAppPhysicalPath": "",
+            "DefaultBrowser": 1,
+            "EnableScriptLogging": false,
+            "BaseUrl": "http://demos.teststudio.com/sampleapp",
+            "KillBrowserProcessOnClose": false,
+            "UseHttpProxy": false,
+            "EnableSilverlight": false,
+            "VerboseHttpProxy": false,
+            "SilverlightConnectTimeout": 60000,
+            "SilverlightApplicationPath": null
+          }
+        },
+        "Wpf": {
+          "__type": "ArtOfTest.WebAii.Core.Settings+WpfSettings",
+          "__value": {
+            "DefaultApplicationPath": null
+          }
+        },
+        "CreateLogFile": true,
+        "LogLocation": "C:\\WebAiiLog\\",
+        "QueryEventLogErrorsOnExit": false,
+        "LogAnnotations": false,
+        "SimulatedMouseMoveSpeed": 0.3,
+        "WaitCheckInterval": 500,
+        "ElementWaitTimeout": 30000,
+        "ExecuteCommandTimeout": 20000,
+        "ExecutionDelay": 0,
+        "UnexpectedDialogAction": 2,
+        "AnnotateExecution": false,
+        "AnnotationMode": 0,
+        "XMultiMgr": true,
+        "ClientReadyTimeout": 60000,
+        "DisableDialogMonitoring": false
+      }
+    },
+    "Tests": [
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "c7928b87-5598-4b07-9bba-5d105b0c6028",
+          "Path": "TestsForWebSampleHowUseMonkeyHelper\\MonkeyHelper_ClickOnElement\\MonkeyHelper_ClickOnElement_sample_1.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "a3b030c3-3624-41dd-9247-1a4b01b68e5d",
+          "Path": "TestsForWebSampleHowUseMonkeyHelper\\MonkeyHelper_ClickOnElement\\MonkeyHelper_ClickOnElement_sample_2.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "50d670a8-685c-4b1e-a507-af6c64bd6f34",
+          "Path": "TestsForWebSampleHowUseMonkeyHelper\\MonkeyHelper_EnterText\\MonkeyHelper_EnterText_sample_1.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "95b23c55-e054-4e7c-aea0-2c70378a81ee",
+          "Path": "TestsForWebSampleHowUseMonkeyHelper\\MonkeyHelper_EnterText\\MonkeyHelper_EnterText_sample_2.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "8f8edb18-4dc9-4dec-9a81-9614fd010ef2",
+          "Path": "TestsForWebSampleHowUseMonkeyHelper\\MonkeyHelper_Verify\\MonkeyHelper_Verify_sample_1.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "7b0b69a8-b544-4a6f-be4b-a538cd15494b",
+          "Path": "TestsForWebSampleHowUseMonkeyHelper\\MonkeyHelper_Verify\\MonkeyHelper_Verify_sample_2.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "71f77e80-1c76-4158-961e-ea3f05eb8be1",
+          "Path": "TestsForWebSampleHowUseMonkeyHelper\\MonkeyHelper_WaitForElement\\MonkeyHelper_WaitForElement_sample_1.tstest",
+          "PathType": 0
+        }
+      },
+      {
+        "__type": "ArtOfTest.WebAii.Design.Execution.TestInfo",
+        "__value": {
+          "Id": "63b4a235-0339-46ab-9a66-cf7f5f50d69f",
+          "Path": "TestsForWebSampleHowUseMonkeyHelper\\MonkeyHelper_WaitForElement\\MonkeyHelper_WaitForElement_sample_2.tstest",
+          "PathType": 0
+        }
+      }
+    ],
+    "Filter": {
+      "__type": "ArtOfTest.WebAii.Design.Execution.Filter",
+      "__value": {
+        "Keys": [],
+        "Comparisons": [],
+        "Values": []
+      }
+    },
+    "ListType": 0,
+    "ProjectId": "d0958ad3-8052-4115-b2cd-30435e861002"
+  }
+}
